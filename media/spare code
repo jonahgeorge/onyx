@@ -1,0 +1,506 @@
+//-------------------------------- Loading Screen Code --------------------------------
+
+//    sf::Image SplashImage;
+//    SplashImage.LoadFromFile("splashscreen.tga");
+//    sf::Image HowToPlayImage;
+//    HowToPlayImage.LoadFromFile("howtoplay.tga");
+//    sf::Image StoryImage;
+//    StoryImage.LoadFromFile("story.tga");
+//    sf::Image CreditsImage;
+//    CreditsImage.LoadFromFile("credits.tga");
+//
+//    sf::Sprite Splash(SplashImage);
+//    Splash.SetPosition(0.f, 0.f);
+//    Splash.Scale(1.f, 1.f);
+//    sf::Sprite HowToPlay(HowToPlayImage);
+//    HowToPlay.SetPosition(0.f, 0.f);
+//    HowToPlay.Scale(1.f, 1.f);
+//    sf::Sprite Story(StoryImage);
+//    Story.SetPosition(0.f, 0.f);
+//    Story.Scale(1.f, 1.f);
+//    sf::Sprite Credits(CreditsImage);
+//    Credits.SetPosition(0.f, 0.f);
+//    Credits.Scale(1.f, 1.f);
+//
+//    sf::Image BackgroundImage;
+//
+//    BackgroundImage.LoadFromFile("Map.tga");
+//
+//    sf::Sprite Background(BackgroundImage);
+//    Background.SetPosition(0.f, 0.f);
+//    Background.Scale(1.f, 1.f);
+
+//---------------------------------- Turret Code (with laser) ----------------------------------------------
+
+//
+//    //North
+//    if (AsteroidY[AsteroidSelect] - PlayerY >= TurretRange * -1 && AsteroidY[AsteroidSelect]  <= PlayerY)
+//    {
+//        if (AsteroidX[AsteroidSelect] - PlayerX <= TurretRange && AsteroidX[AsteroidSelect]  - PlayerX >= TurretRange * -1)
+//        {
+//            Window.Draw(sf::Shape::Line(TurretX[x], TurretY[x], AsteroidX[AsteroidSelect] , AsteroidY[AsteroidSelect] , 1.f, sf::Color::Red));
+//            cout << "shot fired(Hit)\n";
+//            AsteroidCurrentHealth[AsteroidSelect]  -= TurretAttack;
+//            cout << "Asteroid #" << AsteroidSelect << " || CurrentHealth: " << AsteroidCurrentHealth[AsteroidSelect] << endl;
+//        }
+//    }
+////South
+//    else if (AsteroidY[AsteroidSelect]  - PlayerY <= TurretRange && AsteroidY[AsteroidSelect]  >= PlayerY)
+//    {
+//        if (AsteroidX[AsteroidSelect]  - PlayerX <= TurretRange && AsteroidX[AsteroidSelect]  - PlayerX >= TurretRange * -1)
+//        {
+//            Window.Draw(sf::Shape::Line(TurretX[x], TurretY[x], AsteroidX[AsteroidSelect] , AsteroidY[AsteroidSelect] , 1.f, sf::Color::Red));
+//            cout << "shot fired(Hit)\n";
+//            AsteroidCurrentHealth[AsteroidSelect]  -= TurretAttack;
+//        }
+//    }
+////West
+//    else if (AsteroidX[AsteroidSelect]  - PlayerX >= TurretRange * -1 && AsteroidX[AsteroidSelect]  <= PlayerX)
+//    {
+//        if (AsteroidY[AsteroidSelect]  - PlayerY <= TurretRange && AsteroidY[AsteroidSelect]  - PlayerY >= TurretRange * -1)
+//        {
+//            Window.Draw(sf::Shape::Line(TurretX[x], TurretY[x], AsteroidX[AsteroidSelect] , AsteroidY[AsteroidSelect] , 1.f, sf::Color::Red));
+//            cout << "shot fired(Hit)\n";
+//            AsteroidCurrentHealth[AsteroidSelect] -= TurretAttack;
+//        }
+//    }
+////East
+//    else if (AsteroidX[AsteroidSelect]  - PlayerX <= TurretRange && AsteroidX[AsteroidSelect]  >= PlayerX)
+//    {
+//        if (AsteroidY[AsteroidSelect]  - PlayerY <= TurretRange && AsteroidY[AsteroidSelect]  - PlayerY >= TurretRange * -1)
+//        {
+//            Window.Draw(sf::Shape::Line(TurretX[x], TurretY[x], AsteroidX[AsteroidSelect] , AsteroidY[AsteroidSelect] , 1.f, sf::Color::Red));
+//            cout << "shot fired(Hit)\n";
+//            AsteroidCurrentHealth[AsteroidSelect]  -= TurretAttack;
+//        }
+//    }
+
+//    for (int c = 0; c < global.AsteroidCount; c++)
+//        {
+//            for (int x = 0; x < global.BulletCount; x++)
+//            {
+//                if ((bl.BulletY[x] - as.RenderAsteroidY[c] >= 25 * -1 && bl.BulletY[x] <= as.RenderAsteroidY[c]) || (bl.BulletY[x] - as.RenderAsteroidY[c] <= 25 && bl.BulletY[x] >= as.RenderAsteroidY[c]))
+//                {
+//                    if ((bl.BulletX[x] - as.RenderAsteroidX[c] >= 25 * -1 && bl.BulletX[x] <= as.RenderAsteroidX[c]) || (bl.BulletX[x] - as.RenderAsteroidX[c] <= 25 && bl.BulletX[x] >= as.RenderAsteroidX[c]))
+//                    {
+//                        as.AsteroidCurrentHealth[c] -= bl.BulletDamage;
+//                        bl.Disappear(c);
+//
+//                        if (global.Debug == true) {cout << "Asteroid # " << c << "hit!";}
+//                    }
+//                }
+////            if ((bl.BulletY2[x] - as.RenderAsteroidY[c] >= 25 * -1 && bl.BulletY2[x] <= as.RenderAsteroidY[c]) || (bl.BulletY2[x] - as.RenderAsteroidY[c] <= 25 && bl.BulletY2[x] >= as.RenderAsteroidY[c]))
+////            {
+////            if ((bl.BulletX2[x] - as.RenderAsteroidX[c] >= 25 * -1 && bl.BulletX2[x] <= as.RenderAsteroidX[c]) || (bl.BulletX2[x] - as.RenderAsteroidX[c] <= 25 && bl.BulletX2[x] >= as.RenderAsteroidX[c]))
+////                {
+////                    as.AsteroidCurrentHealth[c] -= bl.BulletDamage;
+////                    bl.BulletX2[x] = NULL;
+////                    bl.BulletY2[x] = NULL;
+////
+////                    if (global.Debug == true) {cout << "Asteroid # " << c << "hit!";}
+////                }
+////                }
+//            }
+//        }
+
+
+
+
+    // -------------------------------- Bullet Code ------------------------
+//    for (int x = 0; x < global.BulletCount; x++)
+//    {
+//        bl.BulletX[x] += cos(bl.BulletHeading[x] * pi / 180) * bl.BulletSpeed[x];
+//        bl.BulletY[x] += sin(bl.BulletHeading[x] * pi / 180) * bl.BulletSpeed[x];
+//
+//        bl.BulletX2[x] += cos(bl.BulletHeading2[x] * pi / 180) * bl.BulletSpeed[x];
+//        bl.BulletY2[x] += sin(bl.BulletHeading2[x] * pi / 180) * bl.BulletSpeed[x];
+//
+//        SRBullet[x].SetPosition(bl.BulletX[x], bl.BulletY[x]);
+//        SRBullet[x].SetRotation(bl.BulletHeading[x] * -1);
+//        App.Draw(SRBullet[x]);
+//        SRBullet2[x].SetPosition(bl.BulletX2[x], bl.BulletY2[x]);
+//        SRBullet2[x].SetRotation(bl.BulletHeading2[x] * -1);
+//        App.Draw(SRBullet2[x]);
+//    }
+
+//---------------------- Shoot -----------------------
+
+//    if (TurretFiring == true)
+//    {
+//
+
+//                if (global.Debug == true)
+//                {   cout << "Reload!\n";    }
+//
+//                BulletCounter = 0;
+//            }
+//
+//                TempMX[BulletCounter] = MouseX;
+//                TempMY[BulletCounter] = MouseY;
+//
+//                bl.BulletX[BulletCounter] = tr.TurretX[0];
+//                bl.BulletY[BulletCounter] = tr.TurretY[0];
+//
+//                bl.BulletHeading[BulletCounter] = atan2(TempMY[BulletCounter] - bl.BulletY[BulletCounter],
+//                                                        TempMX[BulletCounter] - bl.BulletX[BulletCounter]) * 180 / pi;
+//                if (pl.PlayerLevel >= 2)
+//                {
+//                    bl.BulletX2[BulletCounter] = tr.TurretX[1];
+//                    bl.BulletY2[BulletCounter] = tr.TurretY[1];
+//
+//                    bl.BulletHeading2[BulletCounter] = atan2(TempMY[BulletCounter] - bl.BulletY2[BulletCounter],
+//                                                        TempMX[BulletCounter] - bl.BulletX2[BulletCounter]) * 180 / pi;
+//                }
+//    }
+//
+//    if (ShipFiring == true)
+//    {
+//        if (BulletCounter <= global.BulletCount - 2)
+//        {
+//            BulletCounter += 1;
+//
+//            float LaserX[ConstBulletCount];
+//            float LaserY[ConstBulletCount];
+//
+//            LaserX[BulletCounter] = 1500 * cos(0.017453277777 * pl.PlayerHeading) + pl.RenderPlayerX;
+//            LaserY[BulletCounter] = 1500 * sin(0.017453277777 * pl.PlayerHeading) + pl.RenderPlayerY;
+//
+//            bl.BulletX[BulletCounter] = pl.RenderPlayerX;
+//            bl.BulletY[BulletCounter] = pl.RenderPlayerY;
+//            bl.BulletSpeed[BulletCounter] = 25;
+//
+//            bl.BulletHeading[BulletCounter] = atan2(LaserY[BulletCounter] - bl.BulletY[BulletCounter], LaserX[BulletCounter] - bl.BulletX[BulletCounter]) * 180 / pi;
+//        }
+//
+//        else if (BulletCounter == global.BulletCount - 1) { BulletCounter = 1;}
+//    }
+
+//            if (yl.IsSelect[c] == true)
+//            {
+//                App.Draw(sf::Shape::Circle(yl.RenderYellowX[c], yl.RenderYellowY[c], 20.f, sf::Color(125,255,0,100), 1.f, sf::Color::Green));
+//            }
+//            if (yl.YellowMove[c] == true)
+//            {
+//                SYellowW[c].SetPosition(yl.RenderYellowX[c],yl.RenderYellowY[c]);
+//                SYellowW[c].SetRotation(yl.YellowHeading[c] * -1);
+//
+//                App.Draw(SYellowW[c]);
+////            }
+//            else
+//            {
+
+//        if (PlayerWMove == true)
+//        {
+//            pl.WMove();
+//        }
+//        else
+//        {
+//            pl.VPlayerX *= .999;
+//            pl.VPlayerY *= .999;
+//        }
+//        if (PlayerAMove == true)
+//        {
+//            pl.AMove();
+//            SShip.SetRotation(pl.PlayerHeading * -1);
+//        }
+//        if (PlayerSMove == true)
+//        {
+//        }
+//        if (PlayerDMove == true)
+//        {
+//            pl.DMove();
+//            SShip.SetRotation(pl.PlayerHeading * -1);
+//        }
+
+//            if ((Event.Type == sf::Event::KeyPressed) && (Event.Key.Code == sf::Key::Space))
+
+
+
+//bool Player::WOnTarget(int EnemyX, int EnemyY)
+//{
+//    if (EnemyY - PlayerY >= PlayerRange * -1 && EnemyY <= PlayerY && PlayerHeading == 8)
+//    {
+//        if (EnemyX - PlayerX <= 5 && EnemyX - PlayerX >= -5)
+//        {
+//            cout << "shot fired(Hit)\n";
+//            return true;
+//        }
+//    }
+//    else
+//    {
+//        cout << "shot fired(Miss)\n";
+//        return false;
+//    }
+//
+//}
+//
+//bool Player::SOnTarget(int EnemyX, int EnemyY)
+//{
+//    if (EnemyY - PlayerY <= PlayerRange && EnemyY >= PlayerY && PlayerHeading == 2)
+//    {
+//        if (EnemyX - PlayerX <= 5 && EnemyX - PlayerX >= -5)
+//        {
+//            cout << "shot fired(Hit)\n";
+//            return true;
+//        }
+//    }
+//    else
+//    {
+//        cout << "shot fired(Miss)\n";
+//        return false;
+//    }
+//}
+//
+//bool Player::AOnTarget(int EnemyX, int EnemyY)
+//{
+//    if (EnemyX - PlayerX >= PlayerRange * -1 && EnemyX <= PlayerX && PlayerHeading == 4)
+//    {
+//        if (EnemyY - PlayerY <= 5 && EnemyY - PlayerY >= -5)
+//        {
+//            cout << "shot fired(Hit)\n";
+//            return true;
+//        }
+//    }
+//    else
+//    {
+//        cout << "shot fired(Miss)\n";
+//        return false;
+//    }
+//
+//}
+//
+//bool Player::DOnTarget(int EnemyX, int EnemyY)
+//{
+//    if (EnemyX - PlayerX <= PlayerRange && EnemyX >= PlayerX && PlayerHeading == 6)
+//    {
+//        if (EnemyY - PlayerY <= 5 && EnemyY - PlayerY >= -5)
+//        {
+//            cout << "shot fired(Hit)\n";
+//            return true;
+//        }
+//    }
+//    else
+//    {
+//        cout << "shot fired(Miss)\n";
+//        return false;
+//    }
+//}
+//        if (Input.IsKeyDown(sf::Key::J))
+//            {
+//                if (PlayerHeading == 8) //W
+//                {
+//                    SW.SetPosition(PlayerX,PlayerY);
+//                    App.Draw(SW);
+//                for (int c = 0; c < EnemyCount; c++)
+//                {
+//                    if (WOnTarget(PlayerX, PlayerY, EnemyX[c], EnemyY[c], PlayerRange, PlayerHeading) == true)
+//                    {
+//                        EnemyCurrentHealth[c] -= PlayerDamage * App.GetFrameTime();
+//                    }
+//                }
+//                }
+//                else if (PlayerHeading == 4) //A
+//                {
+//                    SA.SetPosition(PlayerX,PlayerY);
+//                    App.Draw(SA);
+//                    for (int c = 0; c < EnemyCount; c++)
+//                {
+//                    if (AOnTarget(PlayerX, PlayerY, EnemyX[c], EnemyY[c], PlayerRange, PlayerHeading) == true)
+//                    {
+//                        EnemyCurrentHealth[c] -= PlayerDamage * App.GetFrameTime();
+//                    }
+//                }
+//                }
+//                else if (PlayerHeading == 6) //D
+//                {
+//                    SD.SetPosition(PlayerX,PlayerY);
+//                    App.Draw(SD);
+//                    for (int c = 0; c < EnemyCount; c++)
+//                {
+//                    if (DOnTarget(PlayerX, PlayerY, EnemyX[c], EnemyY[c], PlayerRange, PlayerHeading) == true)
+//                    {
+//                        EnemyCurrentHealth[c] -= PlayerDamage * App.GetFrameTime();
+//                    }
+//                }
+//                }
+//                else if (PlayerHeading == 2) //S
+//                {
+//                    SS.SetPosition(PlayerX,PlayerY);
+//                    App.Draw(SS);
+//                for (int c = 0; c < EnemyCount; c++)
+//                {
+//                    if (SOnTarget(PlayerX, PlayerY, EnemyX[c], EnemyY[c], PlayerRange, PlayerHeading) == true)
+//                    {
+//                        EnemyCurrentHealth[c] -= PlayerDamage * App.GetFrameTime();
+//                    }
+//                }
+//                }
+//            }
+
+//void Player::WMove()
+//{
+//    PlayerX = (PlayerSpeed * cos(0.017453277777 * PlayerHeading)) + PlayerX;
+//    PlayerY = (PlayerSpeed * sin(0.017453277777 * PlayerHeading)) + PlayerY; //0.017453277777 *
+//    cout << PlayerX << " , " << PlayerY << endl;
+//    if (PlayerCurrentFuel > 1)
+//    {
+//        VPlayerX += (cos(0.017453277777 * PlayerHeading)) * PlayerSpeed;
+//        VPlayerY += (sin(0.017453277777 * PlayerHeading)) * PlayerSpeed;
+//        PlayerCurrentFuel -= .01;
+//
+//    }
+//}
+//
+//void Player::SMove()
+//{
+//        VPlayerX += (cos(0.017453277777 * PlayerHeading)) * (PlayerSpeed * -1);
+//        VPlayerY += (sin(0.017453277777 * PlayerHeading)) * (PlayerSpeed * -1);
+//}
+//
+//void Player::AMove()
+//{
+//    PlayerHeading -= 15;
+//    if (PlayerHeading < 0)
+//    {
+//        PlayerHeading = 360;
+//    }
+//}
+//
+//void Player::DMove()
+//{
+//    PlayerHeading += 15;
+//    if (PlayerHeading > 360)
+//    {
+//        PlayerHeading = 0;
+//    }
+//}
+
+////        if (MouseX > PlayerX)
+//            PlayerX = PlayerX + PlayerSpeed;
+//
+//        if (MouseX < PlayerX)
+//            PlayerX = PlayerX - PlayerSpeed;
+//
+//        if (MouseY > PlayerY)
+//            PlayerY = PlayerY + PlayerSpeed;
+//
+//        if (MouseY < PlayerY)
+//            PlayerY = PlayerY - PlayerSpeed;
+
+//void Player::Select(int AsteroidCount, float AsteroidX[5], float AsteroidY[5], int AsteroidRange)
+//{
+//    const sf::Input& Input = Window.GetInput();
+//
+//     float PlayerMouseX = Input.GetMouseX();
+//
+//    float PlayerMouseY = Input.GetMouseY();
+//
+//    for (int c = 0; c < AsteroidCount; c++)
+//    {
+//        if ((AsteroidY[c] - PlayerMouseY >= AsteroidRange * -1 && AsteroidY[c] <= PlayerMouseY)
+//            || (AsteroidY[c] - PlayerMouseY <= AsteroidRange && AsteroidY[c] >= PlayerMouseY))
+//        {
+//            if ((AsteroidX[c] - PlayerMouseX >= AsteroidRange * -1 && AsteroidX[c] <= PlayerMouseX)
+//                || (AsteroidX[c] - PlayerMouseX <= AsteroidRange && AsteroidX[c] >= PlayerMouseX))
+//            {
+//                Window.Draw(sf::Shape::Circle(AsteroidX[c], AsteroidY[c], AsteroidRange - 5, sf::Color(255,0,0,120), 1.f, sf::Color::Red));
+//                AsteroidSelect = c;
+//            }
+//        }
+//    }
+//}
+
+//bool Player::IsAlive()
+//{
+//    if (PlayerCurrentHealth <= 0)
+//            {
+//                PlayerCurrentHealth = PlayerMaxHealth;
+//                PlayerCurrentEnergy = PlayerMaxEnergy;
+//                PlayerX = 400;
+//                PlayerY = 300;
+//                std::cout << "Player Terminated\n";
+//                return false;
+//            }
+//    else if (PlayerCurrentHealth >= 1)
+//    {
+//        return true;
+//    }
+//}
+
+
+        //Player Health Outline
+//Window.Draw(sf::Shape::Rectangle(0, 0, WindowWidth, 15, sf::Color(0,0,139,100)));
+//        //Player Current Health
+//Window.Draw(sf::Shape::Rectangle(0, 0, ((PlayerCurrentHealth / 100.f)) * WindowWidth, 15, sf::Color(0,0,139,255)));
+//        //Player Energy Outline
+//Window.Draw(sf::Shape::Rectangle(0, 15, WindowWidth, 30, sf::Color(255,255,0,100)));
+//        //Player Current Energy
+//Window.Draw(sf::Shape::Rectangle(0, 15, ((PlayerCurrentEnergy / 100.f) * WindowWidth), 30, sf::Color(255,255,0,255)));
+//
+//Window.Draw(sf::Shape::Rectangle(0,30, WindowWidth, 45, sf::Color(34,139,34,100)));
+//
+//Window.Draw(sf::Shape::Rectangle(0,30, ((PlayerCurrentFuel / PlayerMaxFuel) * WindowWidth), 45, sf::Color(34,139,34,255)));
+
+//        GlobalPlayerX += VPlayerX;
+//        GlobalPlayerY += VPlayerY;
+
+//        GlobalPlayerX = (PlayerSpeed * cos(0.017453277777 * PlayerHeading)) + GlobalPlayerX;
+//        GlobalPlayerY = (PlayerSpeed * sin(0.017453277777 * PlayerHeading)) + GlobalPlayerY;
+
+//        if (RenderPlayerX > WindowWidth - 100)
+//            RenderPlayerX = WindowWidth - 100;
+//            ViewX -= PlayerSpeed;
+//        if (RenderPlayerX < 0 + 100)
+//            RenderPlayerX = 100;
+//            ViewX += PlayerSpeed;
+//        if (RenderPlayerY > WindowHeight - 100)
+//            RenderPlayerY = WindowHeight - 100;
+//            ViewY -= PlayerSpeed;
+//        if (RenderPlayerY < 0 + 100)
+//            RenderPlayerY = 100;
+//            ViewY += PlayerSpeed;
+
+
+
+
+void  Player::Shoot()
+{
+//    if (PlayerCurrentEnergy > 50)
+//    {
+//    float LaserX = 1500 * cos(0.017453277777 * PlayerHeading) + PlayerX;
+//    float LaserY = 1500 * sin(0.017453277777 * PlayerHeading) + PlayerY;
+//
+//    PlayerCurrentEnergy -= 50;
+//    Window.Draw(sf::Shape::Line(PlayerX, PlayerY, LaserX, LaserY, 3.f, sf::Color(139,0,139), 1.f, sf::Color(205,0,205)));
+////       finish dis shit@! if (as.AsteroidY == )
+//    }
+//    else if (PlayerCurrentEnergy < 50)
+//    {
+//    cout << "Insufficient Energy\n";
+//    }
+}
+
+//void Player::OnTarget()
+//{
+//
+//}
+
+//        int r[5] = {};
+//        r[1] = 5;
+//        r[2] = 10;
+//        r[3] = 15;
+//        r[4] = 20;
+//        r[5] = 25;
+
+//    for (int c = 0; c < 5; c++)
+//{
+//        Window.Draw(sf::Shape::Circle(PlayerX, PlayerY, r[c], sf::Color::Red));
+//        Window.Display();
+//}
+
+//    GlobalPlayerX = 325 * cos(0.017453277777 * PlayerHeading) + GlobalPlayerX;
+//    GlobalPlayerY = 325 * sin(0.017453277777 * PlayerHeading) + GlobalPlayerY;
+
+
+//        VPlayerX += ((cos(0.017453277777 * PlayerHeading)) * PlayerSpeed) * 10;
+//        VPlayerY += ((sin(0.017453277777 * PlayerHeading)) * PlayerSpeed) * 10;

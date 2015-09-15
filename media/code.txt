@@ -1,0 +1,108 @@
+//North
+    if (CivY - CivY >= CivRange * -1 && PlayerY <= CivY)
+    {
+        if (PlayerX - CivX <= CivRange && PlayerX - CivX >= CivRange * -1)
+        {
+             return true;
+        }
+    }
+//South
+    else if (PlayerY - CivY <= CivRange && PlayerY >= CivY)
+    {
+        if (PlayerX - CivX <= CivRange && PlayerX - CivX >= CivRange * -1)
+        {
+             return true;
+        }
+    }
+//West
+    else if (PlayerX - CivX >= CivRange * -1 && PlayerX <= CivX)
+    {
+        if (PlayerY - CivY <= CivRange && PlayerY - CivY >= CivRange * -1)
+        {
+            return true;
+        }
+    }
+//East
+    else if (PlayerX - CivX <= CivRange && PlayerX >= CivX)
+    {
+        if (PlayerY - CivY <= CivRange && PlayerY - CivY >= CivRange * -1)
+        {
+            return true;
+        }
+    }
+    
+//-----------------------
+
+    if (InRange == true) 
+    {
+        if (CivX > PlayerX)
+        {
+            CivX += CivSpeed;
+        }
+        else if (CivX < PlayerX)
+        {
+            CivX -= CivSpeed;
+        }
+        else if (CivY > PlayerY)
+        {
+            CivY += CivSpeed;
+        }
+        else if (CivY < PlayerY)
+        {
+            CivY -= CivSpeed;
+        }
+    }
+
+
+
+
+
+
+           sheading[i] = atan2(pyp - survivorposy[i], pxp - survivorposx[i]) * 180 / pi;
+                                        survivorposx[i] += cos(sheading[i] * pi / 180) * (speed + .35);
+                                        survivorposy[i] += sin(sheading[i] * pi / 180) * (speed + .35);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ sf::Image SplashImage;
+    SplashImage.LoadFromFile("splashscreen.tga");
+    sf::Image HowToPlayImage;
+    HowToPlayImage.LoadFromFile("howtoplay.tga");
+    sf::Image StoryImage;
+    StoryImage.LoadFromFile("story.tga");
+    sf::Image CreditsImage;
+    CreditsImage.LoadFromFile("credits.tga");
+
+    sf::Sprite Splash(SplashImage);
+    Splash.SetPosition(0.f, 0.f);
+    Splash.Scale(1.f, 1.f);
+    sf::Sprite HowToPlay(HowToPlayImage);
+    HowToPlay.SetPosition(0.f, 0.f);
+    HowToPlay.Scale(1.f, 1.f);
+    sf::Sprite Story(StoryImage);
+    Story.SetPosition(0.f, 0.f);
+    Story.Scale(1.f, 1.f);
+    sf::Sprite Credits(CreditsImage);
+    Credits.SetPosition(0.f, 0.f);
+    Credits.Scale(1.f, 1.f);
+
+    sf::Image BackgroundImage;
+
+    BackgroundImage.LoadFromFile("Map.tga");
+
+    sf::Sprite Background(BackgroundImage);
+    Background.SetPosition(0.f, 0.f);
+    Background.Scale(1.f, 1.f);

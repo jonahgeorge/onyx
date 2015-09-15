@@ -1,0 +1,6 @@
+#ifndef FACTION_H_INCLUDED
+#define FACTION_H_INCLUDED
+
+
+
+#endif // FACTION_H_INCLUDED

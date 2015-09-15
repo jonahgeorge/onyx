@@ -1,0 +1,339 @@
+# depslib dependency file v1.0
+1315977495 source:c:\users\owner\documents\onyx\main.cpp
+	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
+	<SFML/Window/Input.hpp>
+	<iostream>
+	<cstdlib>
+	<time.h>
+	"Player.h"
+	"Asteroid.h"
+	"Turret.h"
+	"Star.h"
+	"Alien.h"
+	"Bullet.h"
+
+1316634989 
+
+1315977469 c:\users\owner\documents\onyx\player.h
+	<SFML/Graphics.hpp>
+	<SFML/Window/Input.hpp>
+
+1316635030 ow/Input.hpp>
+
+1315977327 c:\users\owner\documents\onyx\asteroid.h
+
+1315977471 c:\users\owner\documents\onyx\turret.h
+
+1315977474 c:\users\owner\documents\onyx\star.h
+	<SFML/Graphics.hpp>
+
+1316446543 hics.hpp>
+
+1315977333 c:\users\owner\documents\onyx\alien.h
+
+1315979310 c:\users\owner\documents\onyx\bullet.h
+
+1316634989 source:c:\users\owner\desktop\onyx\main.cpp
+	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
+	<SFML/Window/Input.hpp>
+	<iostream>
+	<cstdlib>
+	<time.h>
+	"Player.h"
+	"Asteroid.h"
+	"Turret.h"
+	"Star.h"
+	"Alien.h"
+	"Bullet.h"
+	"Planet.h"
+
+1316635030 c:\users\owner\desktop\onyx\player.h
+	<SFML/Graphics.hpp>
+	<SFML/Window/Input.hpp>
+
+1316624616 c:\users\owner\desktop\onyx\asteroid.h
+
+1316448615 c:\users\owner\desktop\onyx\turret.h
+
+1316446543 c:\users\owner\desktop\onyx\star.h
+	<SFML/Graphics.hpp>
+
+1316625717 c:\users\owner\desktop\onyx\alien.h
+
+1316450504 c:\users\owner\desktop\onyx\bullet.h
+
+1316621967 c:\users\owner\desktop\onyx\planet.h
+
+1319834561 source:/home/geo/Desktop/Onyx/main.cpp
+	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
+	<SFML/Window/Input.hpp>
+	<iostream>
+	<cstdlib>
+	<time.h>
+	<sstream>
+	<iomanip>
+	"GameHelper.h"
+	"Player.h"
+	"Red.h"
+	"Yellow.h"
+	"Green.h"
+	"Asteroid.h"
+	"Turret.h"
+	"Star.h"
+	"Title.h"
+	"Bullet.h"
+	"Planet.h"
+
+1319817302 /home/geo/Desktop/Onyx/Player.h
+	<SFML/Graphics.hpp>
+	<SFML/Window/Input.hpp>
+
+1319817302 /home/geo/Desktop/Onyx/Asteroid.h
+
+1318349723 /home/geo/Desktop/Onyx/Turret.h
+
+1318172552 /home/geo/Desktop/Onyx/Star.h
+	<SFML/Graphics.hpp>
+
+1317830426 /home/geo/Desktop/Onyx/Alien.h
+
+1317695630 /home/geo/Desktop/Onyx/Bullet.h
+
+1318953880 /home/geo/Desktop/Onyx/Planet.h
+
+1317584140 /home/geo/Desktop/Onyx/Title.h
+
+1318111465 /home/geo/Desktop/Onyx/GameHelper.h
+
+1319817302 /home/geo/Desktop/Onyx/Yellow.h
+
+1317695433 source:/home/geo/Desktop/Onyx[a]/main.cpp
+	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
+	<SFML/Window/Input.hpp>
+	<iostream>
+	<cstdlib>
+	<time.h>
+	"GameHelper.h"
+	"Player.h"
+	"Alien.h"
+	"Yellow.h"
+	"Asteroid.h"
+	"Turret.h"
+	"Star.h"
+	"Title.h"
+	"Bullet.h"
+	"Planet.h"
+
+1317665708 /home/geo/Desktop/Onyx[a]/GameHelper.h
+
+1317599841 /home/geo/Desktop/Onyx[a]/Player.h
+	<SFML/Graphics.hpp>
+	<SFML/Window/Input.hpp>
+
+1317695433 /home/geo/Desktop/Onyx[a]/Alien.h
+
+1317695433 /home/geo/Desktop/Onyx[a]/Yellow.h
+
+1317674379 /home/geo/Desktop/Onyx[a]/Asteroid.h
+
+1317505238 /home/geo/Desktop/Onyx[a]/Turret.h
+
+1316446544 /home/geo/Desktop/Onyx[a]/Star.h
+	<SFML/Graphics.hpp>
+
+1317584140 /home/geo/Desktop/Onyx[a]/Title.h
+
+1317695485 /home/geo/Desktop/Onyx[a]/Bullet.h
+
+1316621968 /home/geo/Desktop/Onyx[a]/Planet.h
+
+1319834679 /home/geo/Desktop/Onyx/Red.h
+
+1318015862 /home/geo/Desktop/Onyx/Green.h
+
+1324242945 source:/home/geo/Onyx/main.cpp
+	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
+	<SFML/Window/Input.hpp>
+	<iostream>
+	<cstdlib>
+	<time.h>
+	<sstream>
+	<iomanip>
+	<vector>
+	"GameHelper.h"
+	"Background.h"
+	"Player.h"
+	"Red.h"
+	"Yellow.h"
+	"Green.h"
+	"Asteroid.h"
+	"Turret.h"
+	"Bullet.h"
+
+1323205235 /home/geo/Onyx/GameHelper.h
+
+1322860125 /home/geo/Onyx/Player.h
+	<vector>
+
+1322861412 /home/geo/Onyx/Red.h
+
+1322861412 /home/geo/Onyx/Yellow.h
+
+1318015862 /home/geo/Onyx/Green.h
+
+1321747643 /home/geo/Onyx/Asteroid.h
+	<vector>
+
+1324177201 /home/geo/Onyx/Turret.h
+
+1321416241 /home/geo/Onyx/Star.h
+
+1317584140 /home/geo/Onyx/Title.h
+
+1324162368 /home/geo/Onyx/Bullet.h
+
+1321413520 /home/geo/Onyx/Planet.h
+
+1321122736 source:/home/geo/Onyx/enemy.cpp
+
+1321122732 /home/geo/Onyx/Enemy.h
+
+1321405819 source:/home/geo/Onyx/asteroid.cpp
+	<SFML/Graphics.hpp>
+	<SFML/Window/Input.hpp>
+	<iostream>
+	<cstdlib>
+	<time.h>
+	<sstream>
+	<iomanip>
+	<vector>
+	"Asteroid.h"
+
+1321172431 /home/geo/Onyx/main.cpp
+	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
+	<SFML/Window/Input.hpp>
+	<iostream>
+	<cstdlib>
+	<time.h>
+	<sstream>
+	<iomanip>
+	<vector>
+	"GameHelper.h"
+	"Player.h"
+	"Red.h"
+	"Yellow.h"
+	"Green.h"
+	"Asteroid.h"
+	"Turret.h"
+	"Star.h"
+	"Title.h"
+	"Bullet.h"
+	"Planet.h"
+
+1324156892 /home/geo/Onyx/Background.h
+	<vector>
+
+1324176038 source:/home/geo/Onyx/background.cpp
+	<SFML/Graphics.hpp>
+	<SFML/Window/Input.hpp>
+	<iostream>
+	<cstdlib>
+	<time.h>
+	<sstream>
+	<iomanip>
+	<vector>
+	"Background.h"
+
+1324156504 source:/home/geo/Onyx/player.cpp
+	<SFML/Graphics.hpp>
+	<SFML/Window/Input.hpp>
+	<iostream>
+	<cstdlib>
+	<time.h>
+	<sstream>
+	<iomanip>
+	<vector>
+	"Player.h"
+
+1324176038 source:c:\users\geo\dropbox\onyx\onyx\background.cpp
+	<SFML/Graphics.hpp>
+	<SFML/Window/Input.hpp>
+	<iostream>
+	<cstdlib>
+	<time.h>
+	<sstream>
+	<iomanip>
+	<vector>
+	"Background.h"
+
+1324156892 c:\users\geo\dropbox\onyx\onyx\background.h
+	<vector>
+
+1321122736 source:c:\users\geo\dropbox\onyx\onyx\enemy.cpp
+
+1324242945 source:c:\users\geo\dropbox\onyx\onyx\main.cpp
+	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
+	<SFML/Window/Input.hpp>
+	<iostream>
+	<cstdlib>
+	<time.h>
+	<sstream>
+	<iomanip>
+	<vector>
+	"GameHelper.h"
+	"Background.h"
+	"Player.h"
+	"Red.h"
+	"Yellow.h"
+	"Green.h"
+	"Asteroid.h"
+	"Turret.h"
+	"Bullet.h"
+
+1323205235 c:\users\geo\dropbox\onyx\onyx\gamehelper.h
+
+1322860125 c:\users\geo\dropbox\onyx\onyx\player.h
+	<vector>
+
+1322861412 c:\users\geo\dropbox\onyx\onyx\red.h
+
+1322861412 c:\users\geo\dropbox\onyx\onyx\yellow.h
+
+1318012262 c:\users\geo\dropbox\onyx\onyx\green.h
+
+1321747643 c:\users\geo\dropbox\onyx\onyx\asteroid.h
+	<vector>
+
+1324177201 c:\users\geo\dropbox\onyx\onyx\turret.h
+
+1324162368 c:\users\geo\dropbox\onyx\onyx\bullet.h
+
+1324156504 source:c:\users\geo\dropbox\onyx\onyx\player.cpp
+	<SFML/Graphics.hpp>
+	<SFML/Window/Input.hpp>
+	<iostream>
+	<cstdlib>
+	<time.h>
+	<sstream>
+	<iomanip>
+	<vector>
+	"Player.h"
+
+1321405819 source:c:\users\geo\dropbox\onyx\onyx\asteroid.cpp
+	<SFML/Graphics.hpp>
+	<SFML/Window/Input.hpp>
+	<iostream>
+	<cstdlib>
+	<time.h>
+	<sstream>
+	<iomanip>
+	<vector>
+	"Asteroid.h"
+
